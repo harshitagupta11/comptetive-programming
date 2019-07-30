@@ -1,0 +1,14 @@
+t= int(input())
+for i in range(t):
+    l=int(input())
+    n=[int(x) for x in input().split()]
+    max=n[-1]
+    z=[]
+    for j in range(l-1,-1,-1):
+        if n[j]>=max:
+            max=n[j]
+            z.append(max)
+    x=len(z)        
+    for k in range(x-1,-1,-1):       
+            print(z[k],end=" ")
+    print() 
