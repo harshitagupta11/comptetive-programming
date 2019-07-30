@@ -1,0 +1,22 @@
+for _ in range(int(input())):
+    n,k=input().split(" ")
+    n=int(n)
+    k=int(k)
+    
+    a=[int(x) for x in input().split()]
+    v=[]
+    y=[]
+    j=0
+    d=k
+    c=0
+    
+    for i in range(k,n+1,k):
+        d=i
+        v=a[j:d]
+        j=d
+        z=v[::-1]
+        y=y+z
+        c=i
+    z=a[c:n]    
+    y=y+z[::-1]    
+    print(*y)    
