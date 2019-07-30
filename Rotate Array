@@ -1,0 +1,12 @@
+t= int(input())
+for k in range(t):
+    l,d=input().split()
+    d=int(d)
+    l=int(l)
+    n=[int(x) for x in input().split()]
+    k=n[d:]+n[0:d]
+    for i in range(l):
+        if i==l-1:
+            print(k[i],end="\n")
+        else:
+            print(k[i],end=" ")
