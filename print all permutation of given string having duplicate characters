@@ -1,0 +1,39 @@
+def permutate(s,chosen,alreadyPrinted):
+    if len(s)==0:
+        chosen="".join(chosen)
+        if chosen not in alreadyPrinted:
+            
+            print(chosen)
+            alreadyPrinted.add(chosen)
+    else:
+        for i in range(len(s)):
+            c=s[i]
+            chosen.append(c);
+            s.remove(c)
+            
+            permutate(s,chosen,alreadyPrinted)
+            s.insert(i,c)
+            chosen.pop()
+ch=[]
+s="bcdc"
+s=list(s)
+alreadyPrinted=set()
+permutate(s,ch,alreadyPrinted)
+
+'''
+input:
+bcdc
+
+ouput:
+bcdc
+bccd
+bdcc
+dbcc
+dcbc
+dccb
+cbdc
+cbcd
+cdbc
+cdcb
+ccbd
+ccdb
