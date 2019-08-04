@@ -1,0 +1,19 @@
+#program to print all permutation of string using backtracking 
+def permutate(s,chosen):
+    if len(s)==0:
+        print("".join(chosen))
+    else:
+        for i in range(len(s)):
+            #chosen
+            c=s[i]         
+            chosen.append(c);
+            s.remove(c)
+            
+            permutate(s,chosen) #explore 
+            #un-chosen
+            s.insert(i,c)
+            chosen.pop()
+chosen=[]
+s="bcd"
+s=list(s)
+permutate(s,chosen)
